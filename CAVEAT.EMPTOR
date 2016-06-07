@@ -12,4 +12,4 @@ Bob Jenkins wrote this random number generator, and then turned to the general i
 
 Sourcecode for ISAAC says that Jenkins has "copyrighted" the code, right next to saying it is in the Public Domain. That makes no sense in our age of formal licensing, which goes to show how old this algorithm really is.
 
-.
+..
