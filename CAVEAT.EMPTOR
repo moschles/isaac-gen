@@ -11,3 +11,5 @@ Although two academics, Aumasson and Pudovkina, analyzed ISAAC,  the generator h
 Bob Jenkins wrote this random number generator, and then turned to the general internet community, offering a large monetary reward for "anyone who could break this cipher".   That methodology is not (I repeat *NOT*) how professional cryptography proceeds in 2016.  At the worst, Jenkins producing a cash reward to "break my cipher" would indicate that he himself is not completely confident about its security. 
 
 Sourcecode for ISAAC says that Jenkins has "copyrighted" the code, right next to saying it is in the Public Domain. That makes no sense in our age of formal licensing, which goes to show how old this algorithm really is.
+
+.
