@@ -1,15 +1,31 @@
-Here I address wether the pseudo-random number generator called `ISAAC`, is really cryptographically secure.  In other words, is it a CSPRNG, or just a PRNG?  More pragmatically, what follows should scare you enough to not use ISAAC in any serious security scenario. 
+Here I address wether the pseudo-random number generator called `ISAAC`, is really cryptographically secure.  
+In other words, is it a CSPRNG, or just a PRNG?  More pragmatically, what follows should scare you enough to 
+not use ISAAC in any serious security scenario. 
 
-In the designer's own words : "I provided no official seeding routine because I didn't feel competent to give one."  Bob Jenkins admits that the security of ISAAC requires that you encrypt the 256-word seed using a strong block cipher.  If you know what that means, and you are capable of coding a block cipher in chaining mode, it is unlikely that you would be using ISAAC at all to begin with. 
+In the designer's own words : "I provided no official seeding routine because I didn't feel competent to 
+give one."  Bob Jenkins admits that the security of ISAAC requires that you encrypt the 256-word seed using 
+a strong block cipher.  If you know what that means, and you are capable of coding a block cipher in 
+chaining mode, it is unlikely that you would be using ISAAC at all to begin with. 
 
-The ISAAC generator is essentially a 32-bit version of RC4.   ISAAC has not presented in any cryptography conferences such as NIST-AES, NESSIE, or EU-ECRYPT.  It is not recognized as a primitive by NIST, NSA, IEEE, or any military engineering group. It was designed outside of academia in a time before much of these conferences existed.
+The ISAAC generator is essentially a 32-bit version of RC4.   ISAAC has not presented in any cryptography 
+conferences such as NIST-AES, NESSIE, or EU-ECRYPT.  It is not recognized as a primitive by NIST, NSA, IEEE, 
+or any military engineering group. It was designed outside of academia in a time before much of these 
+conferences existed.
 
-Jean-Phillipe Aumasson performed cryptanalysis on ISAAC, and he ended up modifying a portion within the very core of the algorithm. Those changes are reflected in the sourcecode provided here. (Academics modified his algorithm after the fact. Insert yellow flags here.) 
+Jean-Phillipe Aumasson performed cryptanalysis on ISAAC, and he ended up modifying a portion within the very
+core of the algorithm. Those changes are reflected in the sourcecode provided here. (Academics modified his 
+algorithm after the fact. Insert yellow flags here.) 
 
-Although two academics, Aumasson and Pudovkina, analyzed ISAAC,  the generator has received little attention from academia.  I.e. Jenkin's paper is not cited in bibliographies of other publications.
+Although two academics, Aumasson and Pudovkina, analyzed ISAAC,  the generator has received little attention
+from academia.  I.e. Jenkin's paper is not cited in bibliographies of other publications.
 
-Bob Jenkins wrote this random number generator, and then turned to the general internet community, offering a large monetary reward for "anyone who could break this cipher".   That methodology is not (I repeat *NOT*) how professional cryptography proceeds in 2016.  At the worst, Jenkins producing a cash reward to "break my cipher" would indicate that he himself is not completely confident about its security. 
+Bob Jenkins wrote this random number generator, and then turned to the general internet community, offering 
+a large monetary reward for "anyone who could break this cipher".   That methodology is not (I repeat *NOT*) 
+how professional cryptography proceeds in 2016.  At the worst, Jenkins producing a cash reward to "break 
+my cipher" would indicate that he himself is not completely confident about its security. 
 
-Sourcecode for ISAAC says that Jenkins has "copyrighted" the code, right next to saying it is in the Public Domain. That makes no sense in our age of formal licensing, which goes to show how old this algorithm really is.
+Sourcecode for ISAAC says that Jenkins has "copyrighted" the code, right next to saying it is in the Public 
+Domain. That makes no sense in our age of formal licensing, which goes to show how old this algorithm 
+really is.
 
 ..
